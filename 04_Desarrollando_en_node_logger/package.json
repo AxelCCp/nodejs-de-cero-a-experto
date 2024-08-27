@@ -1,0 +1,23 @@
+{
+  "name": "03_desarrollando_en_node",
+  "version": "0.0.1",
+  "description": "mi 1ra app de node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "start:dev": "echo 'hola desde DEV' "
+  },
+  "author": "yo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "get-age": "^1.0.1",
+    "uuid": "^10.0.0",
+    "winston": "^3.14.1"
+  }
+}
