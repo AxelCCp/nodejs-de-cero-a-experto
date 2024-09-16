@@ -1,0 +1,1 @@
+console.log('leyendo el app.js desde js');
