@@ -50,6 +50,8 @@
 22_s12_app_noc_fileSystem_mongo_postgres_testing/mongo
 22_s12_app_noc_fileSystem_mongo_postgres_testing/postgres
 22_s12_app_noc_fileSystem_mongo_postgres_testing/node_modules
+22_s12_app_noc_fileSystem_mongo_postgres_testing/mongo-test
+
 
 23_s13_rest-web/node_modules
 23_s13_rest-web/postgres
