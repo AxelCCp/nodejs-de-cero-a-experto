@@ -81,5 +81,14 @@
 32_s19_userStore-token-jwt-email-tokenValidation/mongo/
 32_s19_userStore-token-jwt-email-tokenValidation/node_modules/
 
+33_s19_userStore-token-jwt-email-tokenValidation-nGrokTunneling/mongo/
+33_s19_userStore-token-jwt-email-tokenValidation-nGrokTunneling/node_modules/
+
+34_s20_userStore-tokenJwt-proteccionRutas-pagination-relations/mongo/
+34_s20_userStore-tokenJwt-proteccionRutas-pagination-relations/node_modules/
+
+35_s21_userStore-tokenJwt-protecPaths-pagination-relations-continuation/mongo/
+35_s21_userStore-tokenJwt-protecPaths-pagination-relations-continuation/node_modules/
+
 
 
