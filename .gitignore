@@ -90,5 +90,11 @@
 35_s21_userStore-tokenJwt-protecPaths-pagination-relations-continuation/mongo/
 35_s21_userStore-tokenJwt-protecPaths-pagination-relations-continuation/node_modules/
 
+36_s22_userStore-tokenJwt-protecPaths-pagination-relations-files/mongo/
+36_s22_userStore-tokenJwt-protecPaths-pagination-relations-files/node_modules/
+
+37_s22_userStore-tokenJwt-protecPaths-pagination-relations-files-middlewareForFiles/mongo/
+37_s22_userStore-tokenJwt-protecPaths-pagination-relations-files-middlewareForFiles/node_modules/
+
 
 
