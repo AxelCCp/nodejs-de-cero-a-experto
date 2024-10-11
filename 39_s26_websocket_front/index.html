@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>Websockets - <small>status</small> </h1>
+
+    <form>
+        <input type="text" placeholder="enviar mensaje">
+        <button>enviar</button>
+    </form>
+
+    <ul id="messages">
+
+    </ul>
+
+    <script>
+
+        console.log('hola . . .. ');
+
+        
+
+        const form = document.querySelector('form');
+
+        const input = document.querySelector('input');
+
+        const messagesElem = document.querySelector('#messages');
+
+        const statusElem = document.querySelector('small');
+
+        function connectToServer() {                             //funcion para reconectar en caso de desconexion
+
+            const socket = new WebSocket('ws://localhost:3000');    //se usa al implementacion nativa que tienen los navegadores acerca de los web sockets.
+
+            function sendMessage(message) {
+
+            console.log(message);
+
+            socket.send(message);                               //manda el mensaje añ servidor.
+            
+            }   
+
+
+            function renderMessage(message) {
+                const li = document.createElement('li');
+                li.innerHTML = message;
+                messagesElem.prepend(li);
+            }
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();                             //para evitar que recargue el navegador.
+                const message = input.value;
+                sendMessage(message);
+            });
+
+            socket.onopen = (event) => {
+                //console.log(event);
+                //console.log('connected');
+                statusElem.innerText = 'Online';
+            }
+
+            socket.onclose = () => {
+                //console.log(event);
+                statusElem.innerText = 'Offline';
+                setTimeout(() => {
+                    connectToServer();
+                }, 1500);
+                //console.log('disconnected');
+            }
+
+            socket.onmessage = (event) => {                          //recibe el mensage desde el servidor
+
+                //inicialmente se mandaba un data desde el servidor:
+                //console.log(event);
+                //console.log(event.data);
+
+                const {payload} = JSON.parse(event.data);
+                console.log(payload);
+                renderMessage(payload);
+            }
+
+        }
+
+        connectToServer();
+
+    </script>
+
+</body>
+</html>

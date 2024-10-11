@@ -96,5 +96,9 @@
 37_s22_userStore-tokenJwt-protecPaths-pagination-relations-files-middlewareForFiles/mongo/
 37_s22_userStore-tokenJwt-protecPaths-pagination-relations-files-middlewareForFiles/node_modules/
 
+38_s26_websocket/node_modules/
+
+40_s27_socketServer/node_modules/
+
 
 
